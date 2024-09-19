@@ -186,10 +186,34 @@ body{
     /* PROJECTS */
 .projects{
     grid-area: projects;
-    background-color: yellowgreen;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
 }
 
-    /* FOOTER */
+.projects img {
+    height: 100%;
+    transition: 0.3s;
+}
+
+.projects a:hover img {
+    opacity: 0.8;
+}
+
+@media (max-width: 768px){
+    .projects{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+}
+
+@media (max-width:425px){
+    .projects{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+}
+
+/* FOOTER */
 .footer{
     grid-area: footer;background-color: violet;
 }
